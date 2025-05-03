@@ -33,7 +33,7 @@ const App = () => {
   const obj = { state, updstate };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/NewsArticleProject'>
       <Ct.Provider value={obj}>
         <Nav />
         <Routes>
