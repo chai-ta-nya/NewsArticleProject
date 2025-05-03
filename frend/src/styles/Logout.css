@@ -1,0 +1,38 @@
+
+.logout-container 
+{
+  padding: 4rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #27273d);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+}
+.logout-container h1 
+{
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-bottom: 1rem;
+  animation: glow 1.5s infinite alternate;
+}
+@keyframes glow 
+{
+  from {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  }
+}
+  
+.logout-container p 
+{
+  font-size: 1.2rem;
+  color: #ccc;
+}
+  

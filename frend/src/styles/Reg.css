@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #27273d);
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.form-container input {
+  width: 300px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-container input::placeholder {
+  color: #ccc;
+}
+
+.form-container input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00ffff;
+}
+
+.form-container button {
+  width: 320px;
+  padding: 0.8rem 1rem;
+  background: #00ffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #1e1e2f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.form-container button:hover {
+  background: #00e0e0;
+  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+  transform: scale(1.05);
+}
+.password-wrapper {
+  position: relative;
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  padding-right: 2.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.password-wrapper span {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 1rem;
+}
