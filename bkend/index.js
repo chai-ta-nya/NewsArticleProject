@@ -1,28 +1,20 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+let express = require("express");
+let mongoose = require("mongoose");
+let cors = require("cors");
+require("dotenv").config(); // Load env vars
+
 const rt = require("./routes/route");
 
-const app = express();
+mongoose.connect(process.env.MONGODB_URI).then(() => {
+    console.log("MongoDB connected");
+}).catch((err) => console.error("MongoDB error:", err));
 
-// Middleware
+let app = express();
 app.use(express.json());
 app.use(cors());
-
-// Routes
 app.use("/", rt);
 
-// Database Connection
-mongoose.connect("mongodb://127.0.0.1:27017/newsarticledb")
-    .then(() => {
-        console.log("Database connected successfully");
-    })
-    .catch((err) => {
-        console.error("Database connection error:", err);
-    });
-
-// Server Listener
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+let port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
