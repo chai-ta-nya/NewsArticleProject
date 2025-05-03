@@ -1,0 +1,14 @@
+# === FRONTEND (frend) ===
+frend/node_modules/
+frend/build/
+
+# === BACKEND (bkend) ===
+bkend/node_modules/
+bkend/.env
+
+# === Common exclusions ===
+.DS_Store
+.env
+*.log
+.vscode/
+.idea/
